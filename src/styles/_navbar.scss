@@ -1,0 +1,123 @@
+.navbar-container {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  background: $background;
+
+  @include media("<=tablet") {
+    padding: 0;
+  }
+}
+
+.nav-wrapper {
+  max-width: 76.875rem;
+  margin-right: auto;
+  margin-left: auto;
+  height: 5rem;
+  display: flex;
+  font-size: 1.2rem;
+  width: 100%;
+  justify-content: space-between;
+
+  @include media("<=laptop") {
+    padding: 0rem 2.1rem;
+  }
+
+  @include media("<=tablet") {
+    padding: 1rem 1.5rem;
+  }
+
+  .nav-logo {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    @include media("<=laptop") {
+      padding-left: 0.8rem;
+    }
+  }
+
+  .nav-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+    justify-content: center;
+
+    @include media("<=tablet") {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100vh;
+      position: absolute;
+      left: -100%;
+      opacity: 1;
+      justify-content: center;
+
+      &.active {
+        background: rgb(240, 240, 246);
+        background: linear-gradient(
+          180deg,
+          rgba(240, 240, 246, 1) 0%,
+          #cfdef3 100%
+        );
+        top: 0;
+        left: 0;
+        opacity: 1;
+        transition: all 0.2s ease-in-out;
+        z-index: -1;
+        padding: 0 1rem;
+      }
+    }
+  }
+
+  .nav-item {
+    @include media(">=smallPhone", "<=phone", "<=laptop") {
+      width: 100%;
+    }
+  }
+  .nav-link {
+    color: $darkBlue;
+    display: flex;
+    align-items: center;
+    font-size: 0.88rem;
+    font-family: $poppins;
+    font-weight: 600;
+    padding: 1.5rem;
+    cursor: pointer;
+    user-select: none;
+
+    &:hover {
+      color: $purple;
+      transition: all 0.3 ease-out;
+    }
+
+    &.active {
+      color: $purple;
+    }
+
+    @include media("<=tablet") {
+      justify-content: center;
+      font-weight: 600;
+      font-size: 2.3rem;
+      letter-spacing: -0.025rem;
+      width: 100%;
+      line-height: 2.93rem;
+
+      &:hover {
+        color: $darkBlue;
+      }
+    }
+  }
+
+  .hamburger-menu {
+    display: none;
+
+    @include media("<=tablet") {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+}

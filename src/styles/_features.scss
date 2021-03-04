@@ -1,0 +1,116 @@
+.features-container {
+  max-width: 90rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.features-wrapper {
+  padding: 2rem 2.5rem;
+  align-items: center;
+  align-content: center;
+  background-color: $whiteSmoke;
+
+  @include media("<=tablet") {
+    padding: 1.5rem;
+    flex-direction: column-reverse;
+  }
+}
+
+.features-row {
+  display: flex;
+  margin: 0 -0.9375rem -0.9375rem -0.9375rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.features-col {
+  display: flex;
+  margin-bottom: 5rem;
+  padding: 0 0.9375rem;
+  flex: 1;
+  max-width: 50%;
+  flex-basis: 50%;
+
+  @include media("<=laptop") {
+    display: flex;
+    max-width: 100%;
+    flex-basis: 100%;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 2.5rem;
+  }
+}
+
+.features-text {
+  max-width: 40.75rem;
+  padding-top: 0;
+  padding-bottom: 3.75rem;
+  padding-left: 4rem;
+  color: $midnightBlue;
+  margin-top: 2.5rem;
+
+  @include media("<=tablet") {
+    padding-bottom: 0;
+    text-align: center;
+    padding-left: 0;
+    align-items: center;
+  }
+
+  @include media("<=laptop") {
+    max-width: none;
+    padding: 0 1rem 3.75rem 1rem;
+  }
+
+  .feature-header {
+    margin-bottom: 1.5rem;
+    font-size: 3rem;
+    line-height: 1.1;
+    font-weight: 600;
+    font-family: $poppins;
+    color: $midnightBlue;
+
+    @include media("<=tablet") {
+      font-size: 2rem;
+    }
+
+    @include media("<=phone") {
+      font-size: 1.5rem;
+    }
+  }
+
+  .feature-description {
+    margin-bottom: 2.18rem;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    font-family: $poppins;
+    color: $slateBlue;
+
+    @include media("<=tablet") {
+      margin-bottom: 2rem;
+    }
+
+    @include media("<=phone") {
+      font-size: 1rem;
+    }
+  }
+}
+
+.features-img {
+  display: flex;
+  margin-top: 1.8rem;
+
+  > img {
+    display: inline-block;
+    padding-right: 0;
+    max-width: 100%;
+    vertical-align: middle;
+    max-height: 40rem;
+
+    @include media("<=laptop") {
+      display: flex;
+      align-content: center;
+      object-fit: contain;
+      max-height: 25rem;
+    }
+  }
+}

@@ -1,0 +1,121 @@
+.setup-container {
+  user-select: none;
+  max-width: 90rem; //86.25rem
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.setup-wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background: #673ab7;
+  background: -webkit-linear-gradient(to top, #512da8, #673ab7);
+  background: linear-gradient(to top, #512da8, #673ab7);
+  padding: 5rem 0;
+  clip-path: polygon(0 15vh, 100% 0, 100% 100%, 0 100%);
+
+  @include media("<=desktop") {
+    padding: 5rem 0 2rem 0;
+  }
+}
+
+.setup-text {
+  padding: 1rem;
+  line-height: 3rem;
+
+  .setup-header {
+    transition: color 0.2s ease-in-out 0s;
+    letter-spacing: 0.1548em;
+    font-size: 2rem;
+    text-align: center;
+    font-family: $poppins;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: $whiteSmoke;
+
+    @include media("<=laptop") {
+      font-size: 1.8rem;
+      margin-top: 3rem;
+    }
+
+    @include media("<=tablet") {
+      margin-top: 1rem;
+    }
+  }
+
+  .setup-subheading {
+    font-size: 1.5rem;
+    letter-spacing: -0.03em;
+    font-family: $poppins;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.5rem;
+    color: #fbeaff;
+
+    @include media("<=laptop") {
+      font-size: 1rem;
+    }
+  }
+}
+
+.setup-elements {
+  display: flex;
+  box-sizing: border-box;
+  margin: 3.5rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: center;
+  color: $whiteSmoke;
+
+  @include media("<=laptop") {
+    flex-direction: column;
+    margin: 1rem;
+    padding: 1rem;
+  }
+}
+
+.setup-step {
+  justify-content: space-between;
+  align-items: center;
+  width: calc((85% - 3.125rem) / 3);
+
+  @include media("<=laptop") {
+    width: 100%;
+    margin: 1.5rem;
+  }
+}
+
+.icon-wrapper {
+  align-items: center;
+
+  img {
+    display: block;
+    margin: auto;
+    height: 4rem;
+  }
+}
+
+.steps-header {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  font-family: $poppins;
+  text-align: center;
+  color: $whiteSmoke;
+
+  @include media("<=desktop") {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.steps-description {
+  font-size: 0.975rem;
+  font-family: $poppins;
+  text-align: center;
+  font-weight: 500;
+  padding: 0 1.5rem;
+
+  @include media("<=laptop") {
+    padding: 0 2.5rem;
+  }
+}

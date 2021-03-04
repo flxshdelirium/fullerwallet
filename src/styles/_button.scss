@@ -1,0 +1,81 @@
+.btn {
+  font-family: $poppins;
+  font-weight: 300;
+  border-radius: 0.625rem;
+  cursor: pointer;
+  outline: none;
+}
+
+.hero-btn {
+  background-color: $midnightBlue;
+  color: $lightColor;
+  border: none;
+  padding: 0.625rem 1.25rem;
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+  text-align: center;
+}
+
+.cta-download {
+  background-color: $midnightBlue;
+  color: $whiteSmoke;
+  border: none;
+  padding: 0.625rem 1.25rem;
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+  text-align: center;
+}
+
+.cta-newsletter {
+  color: $whiteSmoke;
+  background-color: $darkGray;
+  display: inline-flex;
+  text-transform: uppercase;
+  font-family: $openSans;
+  font-size: 0.9rem;
+  font-weight: 800;
+  padding: 0 2.5rem;
+  min-height: 3.5rem;
+  border: none;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  outline: none;
+  text-decoration: none;
+  letter-spacing: 0.0625rem;
+  text-align: center;
+  flex-shrink: 0;
+
+  @include media("<=desktop") {
+    min-width: 0;
+    max-width: 5rem;
+    min-height: 3rem;
+  }
+}
+
+.cta-outline {
+  background-color: transparent;
+  border: 0.125rem solid $midnightBlue;
+  padding: 0.625rem 0.95rem;
+  font-size: 0.8rem;
+  line-height: 1.3rem;
+  font-weight: 800;
+  text-align: center;
+  color: $midnightBlue;
+
+  &:hover {
+    transition: all 0.3s ease-out;
+    background-color: $midnightBlue;
+    color: $whiteSmoke;
+  }
+
+  @include media("<=tablet") {
+    margin-top: 8rem;
+    background-color: $midnightBlue;
+    color: $whiteSmoke;
+    padding: 0.725rem 0.95rem;
+    font-size: 1.3rem;
+  }
+}

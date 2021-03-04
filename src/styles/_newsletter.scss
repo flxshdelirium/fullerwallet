@@ -1,0 +1,193 @@
+.newsletter-container {
+  user-select: none;
+  max-width: 90rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.newsletter-wrapper {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 40%;
+
+  @include media("<=desktop") {
+    grid-template-columns: 100%;
+  }
+}
+
+.newsletter-column-left {
+  display: grid;
+  align-items: center;
+  height: 25rem;
+  white-space: pre-wrap;
+  background-color: $purple;
+
+  @include media("<=laptop") {
+    grid-template-columns: 100%;
+    height: 25rem;
+    padding: 1rem 2rem;
+  }
+
+  .col-left-wrapper {
+    margin-left: 6.5rem;
+
+    @include media("<=laptop") {
+      grid-template-columns: 100%;
+      height: 25rem;
+      margin: 0 auto;
+      padding: 5rem 0;
+    }
+
+    @include media("<=phone") {
+      width: 100%;
+    }
+  }
+
+  .newsletter-header {
+    font-family: $poppins;
+    font-size: 2rem;
+    color: $whiteSmoke;
+    margin-top: 0;
+    margin-bottom: 0;
+
+    @include media("<=laptop") {
+      text-align: center;
+      align-items: center;
+      font-size: 1.8rem;
+    }
+  }
+
+  .newsletter-subtext {
+    font-family: $openSans;
+    font-size: 1.2rem;
+    color: $whiteSmoke;
+    max-width: 40.625rem;
+
+    @include media("<=laptop") {
+      text-align: center;
+      align-self: center;
+      font-size: 1rem;
+      max-width: 64rem;
+    }
+  }
+
+  .newsletter-wrapper {
+    width: 56.25rem;
+
+    @include media("<=laptop") {
+      width: 37.5rem;
+      align-self: center;
+      margin: 0 5rem;
+    }
+
+    @include media("<=tablet") {
+      max-width: 36.25rem;
+    }
+
+    @include media("<=phone") {
+      width: auto;
+      margin: 0 0;
+    }
+  }
+
+  .newsletter-form {
+    width: 100%;
+    flex-direction: row;
+    border: 0.18rem solid rgb(17, 17, 17);
+    padding: 0.625rem;
+    background-color: $whiteSmoke;
+    font-family: $poppins;
+
+    @include media("<=laptop") {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 0;
+    }
+
+    .form-wrapper {
+      display: inline-flex;
+      justify-content: space-between;
+      padding: 0rem 1rem;
+      width: 100%;
+      align-items: center;
+    }
+
+    .input-wrapper {
+      display: inline-flex;
+      -webkit-box-pack: justify;
+      flex-direction: column;
+      padding-right: 0.937rem;
+      flex-shrink: 1;
+      width: max-content;
+      justify-content: flex-start;
+    }
+
+    .email-form-input {
+      border: none;
+      line-height: 1rem;
+      font-family: $poppins;
+      font-size: 1rem;
+      outline: none;
+      padding: 0;
+      display: inline-block;
+      width: 100%;
+      color: $darkGray;
+      background: none;
+
+      &:focus-within {
+        border-bottom: 0.18rem solid $purple;
+        transition: all 0.3 ease-in-out;
+      }
+
+      @include media("<=laptop") {
+        display: inherit;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    .email-form-label {
+      display: block;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: $darkGray;
+    }
+  }
+
+  .btn-wrapper {
+    display: inline-flex;
+    justify-content: flex-end;
+  }
+  .error-msg {
+    font-size: 0.6rem;
+    color: red;
+    display: inline-block;
+  }
+
+  .success-msg {
+    font-size: 0.6rem;
+    color: green;
+    display: inline-block;
+  }
+}
+
+.newsletter-column-right {
+  display: grid;
+
+  .newsletter-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    @include media("<=laptop") {
+      height: 25rem;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    @include media("<=phone") {
+      height: auto;
+    }
+  }
+}

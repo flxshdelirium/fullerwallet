@@ -1,0 +1,24 @@
+.error-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  align-content: center;
+  margin-top: 5rem;
+
+  @include media("<=desktop") {
+    margin-top: 10rem;
+    padding: 2.5rem 1rem;
+  }
+
+  .error-text {
+    font-family: $poppins;
+    color: $midnightBlue;
+    margin-top: 3rem;
+  }
+
+  .error-img {
+    max-width: 90%;
+  }
+}

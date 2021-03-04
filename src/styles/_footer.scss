@@ -1,0 +1,131 @@
+.footer-container {
+  max-width: 90rem;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include media("<=laptop") {
+    text-align: center;
+    padding: 0;
+  }
+
+  .footer-wrapper {
+    display: grid;
+    padding: 2.5rem 7.5rem;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "links1 links2 links3 cta"
+      "links1 links2 links3 copyright";
+    justify-items: start;
+
+    @include media("<=laptop") {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      padding: 0;
+    }
+  }
+
+  .footer-social {
+    grid-area: social;
+    align-self: end;
+    margin: 1.2rem 0;
+
+    > a {
+      color: $midnightBlue;
+      font-size: 2rem;
+      display: inline-block;
+      height: 1.25rem;
+
+      &:hover {
+        color: $purple;
+        transform: translateY(10%);
+        transition: all 0.2s ease-in;
+      }
+    }
+
+    a:not(:last-child) {
+      margin-right: 1rem;
+    }
+    @include media("<=laptop") {
+      display: inline-block;
+      margin-bottom: 0.3rem;
+      margin-top: 1.5rem;
+    }
+  }
+
+  .footer-links {
+    justify-content: space-between;
+    align-items: flex-start;
+    line-height: 2;
+    font-family: $poppins;
+    display: flex;
+    flex-direction: column;
+    user-select: none;
+
+    > a {
+      cursor: pointer;
+      color: $midnightBlue;
+
+      &:hover {
+        color: $purple;
+        transition: all 0.2s ease-in;
+      }
+    }
+
+    @include media("<=laptop") {
+      align-items: center;
+      margin-bottom: 2rem;
+      line-height: 1.5;
+    }
+
+    .footer-links-title {
+      color: $midnightBlue;
+      font-size: 1.2rem;
+    }
+
+    &.col1 {
+      grid-area: links1;
+
+      @include media("<=laptop") {
+        margin-top: 1rem;
+      }
+    }
+
+    &.col2 {
+      justify-content: flex-start;
+      grid-area: links2;
+    }
+
+    &.col3 {
+      justify-content: flex-start;
+      grid-area: links3;
+
+      @include media("<=laptop") {
+        margin-bottom: 1.875rem;
+      }
+    }
+  }
+
+  .footer-cta {
+    grid-area: cta;
+    justify-self: end;
+    margin-bottom: 1.875rem;
+
+    @include media("<=laptop") {
+      align-items: center;
+    }
+  }
+
+  .footer-copyright {
+    grid-area: copyright;
+    align-self: end;
+    justify-self: end;
+    font-family: $poppins;
+    font-size: 0.7582rem;
+
+    @include media("<=laptop") {
+      align-self: center;
+    }
+  }
+}

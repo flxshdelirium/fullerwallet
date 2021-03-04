@@ -1,0 +1,53 @@
+.reviews-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: center;
+  padding: 2rem 4rem 0 4rem;
+
+  @include media("<=laptop") {
+    margin: 0;
+    flex-direction: column;
+    padding: 2rem 2rem;
+  }
+
+  @include media("<=phone") {
+    margin-top: 1rem;
+    padding: 0;
+  }
+
+  .reviews-wrapper {
+    width: calc((85% - 5rem) / 3);
+  }
+
+  .reviews-icon {
+    align-items: center;
+    > img {
+      display: block;
+      margin: auto;
+      height: 1.5rem;
+    }
+  }
+
+  .reviews-header {
+    margin-top: 1.5rem;
+    font-size: 1.4rem;
+    text-align: center;
+    font-family: $poppins;
+    color: $midnightBlue;
+  }
+
+  .reviews-subtext {
+    color: $purple;
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: $poppins;
+
+    @include media("<=tablet") {
+      margin-bottom: 5rem;
+    }
+  }
+}

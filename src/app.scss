@@ -1,0 +1,21 @@
+// This is the main styles file. It is only used to import other scss files.
+
+// Resets, Variables, Mix-Ins
+@import "./styles/variables";
+@import "./styles/breakpoints";
+@import "./styles/globals";
+
+// Component Styling
+@import "./styles/navbar";
+@import "./styles/hero";
+@import "./styles/setup";
+@import "./styles/newsletter";
+@import "./styles/features";
+@import "./styles/faq";
+@import "./styles/download";
+@import "./styles/footer";
+
+// Styling for misc components
+@import "./styles/button";
+@import "./styles/reviews";
+@import "./styles/error";

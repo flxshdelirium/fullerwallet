@@ -1,0 +1,105 @@
+.hero-container {
+  display: grid;
+  grid-template-columns: auto 40.625rem;
+  max-width: 76.875rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5rem;
+  z-index: 10;
+  column-gap: 1rem;
+  height: 70vh;
+
+  @include media("<=laptop") {
+    padding: 1rem 1.5rem;
+    grid-template-columns: 100%;
+    margin: 0;
+  }
+
+  @include media("<=phone") {
+    height: 100vh;
+  }
+}
+
+.hero-text {
+  margin-top: 5rem;
+
+  @include media("<=laptop") {
+    margin: 0 auto;
+    padding-left: 0;
+    text-align: center;
+    align-items: center;
+  }
+
+  .hero-header {
+    font-size: 2.8rem;
+    margin-top: 2.5rem;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+    font-family: $poppins;
+    color: $midnightBlue;
+    max-width: 37.812rem;
+
+    .ng-color {
+      color: $purple;
+    }
+
+    @include media("<=laptop") {
+      font-size: 1.8rem;
+      margin-top: 1rem;
+      max-width: 45rem;
+    }
+
+    @include media("<=tablet") {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  .hero-subtext {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 3rem;
+    font-family: $poppins;
+    color: $slateBlue;
+    max-width: 37.5rem;
+
+    @include media("<=laptop") {
+      font-size: 1rem;
+      max-width: 45rem;
+    }
+
+    @include media("<=tablet") {
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+    }
+  }
+}
+
+.hero-img-wrapper {
+  max-width: 50.312rem;
+  padding-left: 2rem;
+  z-index: 20;
+
+  @include media("<=laptop") {
+    padding-left: 0;
+    margin: 0 auto;
+  }
+
+  .hero-phone-img {
+    object-fit: cover;
+
+    @include media("<=laptop") {
+      width: 100%;
+      margin-top: 1rem;
+    }
+
+    @include media("<=tablet") {
+      height: 30rem;
+      margin-top: 1rem;
+      object-fit: contain;
+    }
+
+    @include media("<=phone") {
+      height: auto;
+    }
+  }
+}
